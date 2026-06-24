@@ -1,0 +1,77 @@
+---
+title: "Moderate-Intensity Statin with Ezetimibe Combination Therapy vs High-Intensity Statin Monotherapy in ASCVD Patients"
+subtitle: "Randomized, open-label, non-inferiority trial"
+author: "Chaeeon Lee"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    df-print: paged
+  docx:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+library(data.table)
+library(magrittr)
+library(flextable)
+library(ggplot2)
+
+source("analysis.R")
+
+set_flextable_defaults(
+  font.size = 10,
+  padding = 3
+)
+```
+
+# Overview
+
+This report is a Quarto starter template. Replace the demo data import in `global.R`, update `varlist`, and rerun this document.
+
+# Baseline Characteristics
+
+```{r}
+#| label: tbl-baseline
+
+ft_list[["Table1_Baseline"]]
+```
+
+# Survival Analysis
+
+```{r}
+#| label: tbl-cox
+
+ft_list[["Table2_Cox"]]
+```
+
+```{r}
+#| label: fig-km
+#| fig-cap: "Kaplan-Meier curve by sex"
+#| fig-width: 8
+#| fig-height: 6
+
+plot_list[["Figure1_KM"]]
+```
+
+# Result Summary
+
+- Replace this section with the main numerical findings after checking the final tables.
+- Keep interpretation consistent with the model and endpoint definitions.
+- Exported files are saved as `Tables.xlsx` and `Figures.pptx` when `analysis.R` is sourced.
+
+# Statistical Analysis
+
+Baseline characteristics were summarized as median (interquartile range) for continuous variables and number (percentage) for categorical variables. Continuous variables were compared using the Wilcoxon rank-sum test, and categorical variables were compared using the chi-squared test or Fisher's exact test, as appropriate. Time-to-event outcomes were analyzed using Kaplan-Meier curves and compared using the log-rank test. Hazard ratios and 95% confidence intervals were estimated using Cox proportional hazards regression.
+
+All analyses were performed using R 4.5.2 (R Foundation for Statistical Computing, Vienna, Austria).
