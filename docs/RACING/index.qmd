@@ -23,6 +23,17 @@ execute:
 #study-design-and-treatment-allocation li li {
   margin-bottom: 0.25em;
 }
+.slide-img {
+  display: block;
+  max-width: 100%;
+  max-height: 76vh;
+  margin: 0 auto;
+  object-fit: contain;
+}
+.reveal .slide.scrollable.center {
+  height: 100%;
+  overflow-y: auto;
+}
 </style>
 
 ## Glossary
@@ -33,7 +44,7 @@ execute:
 
 ## Introduction
 - ASCVD 환자에게 적용하는 치료약의 **효과성**과 **안전성**을 측정함.  <br><br>
-- **효과성**: primary end point occur하는 환자가 적을수록, LDL<70mg을 만족하는 환자가 많을수록 **효과성이 높다**고 판단. <br><br>
+- **효과성**: primary Endpoint 발생하는 환자가 적을수록, LDL<70mg을 만족하는 환자가 많을수록 **효과성이 높다**고 판단. <br><br>
 - **안전성**: 약제 불내성으로 인한 약 복용 중단하는 환자가 적을수록 **안전성이 높다**고 판단.
 
 ## Background
@@ -53,65 +64,67 @@ execute:
 
 ## Study design and Treatment Allocation {.scrollable}
 - **Randomized, open-label, non-inferiority trial**: 
-- 환자를 무작위로 배정, 환자와 의사 모두 치료군을 알고 있었으며, 병합요법이 단독요법보다 임상적으로 뒤떨어지지 않는지 평가함.
+  - 환자를 무작위로 배정, 환자와 의사 모두 치료군을 알고 있었으며, 병합요법이 단독요법보다 임상적으로 뒤떨어지지 않는지 평가함.
 
 - **Multi-center, investigator-initiated**: 
-- 한국 26개 병원에서 진행된 연구, 연구자 주도 임상실험. 여러 기관이 참여했기 때문에 일반화 가능성 높음.
+  - 한국 26개 병원에서 진행된 연구, 연구자 주도 임상실험. 여러 기관이 참여했기 때문에 일반화 가능성 높음.
 
 - **ASCVD Population**: 
-- 죽상경화성 심혈관질환이 있는 환자.
+  - 죽상경화성 심혈관질환이 있는 환자.
   - 심근경색, 급성관상동맥증후군, 재혈관화, 허혈성 뇌졸중, 말초동맥질환 병력이 있는 고위험군.
   - LDL을 강하게 낮춰야 하는 대상. 목표: LDL 수치<70mg/dL
   
 - **1:1 Web-response permuted-block Randomization**:
-- 웹기반 시스템을 통해 두 치료군에 1:1 배정됨.
+  - 웹기반 시스템을 통해 두 치료군에 1:1 배정됨.
   - Permuted-block Randomization을 통해 두 군의 환자수가 균형 있게 유지되도록 함.
   
 - **Mixed block sizes of 4 or 6**: 
-- 항상 같은 block size를 쓰면 다음 배정을 예측할 가능성이 생기므로, 이를 배제하고자 mixed block을 사용함.
+  - 항상 같은 block size를 쓰면 다음 배정을 예측할 가능성이 생기므로, 이를 배제하고자 mixed block을 사용함.
 
-- **Stratified by baseline LDL cholesterol and diabetes**ㄷ
+- **Stratified by baseline LDL cholesterol and diabetes**
   - LDL cholesterol<100mg/dL (LDL 수치 높은 고위험군)
   - Diabetes
   - 두 변수는 심혈관 위험과 LDL 조절에 영향을 줄 수 있으므로 양쪽 군에 균형 있게 배치함.
 - **3-year follow-up**
   - 약 용량 3년 동안 유지 강하게 권고.
   - 3년동안 전반적 건강 상태/ 근육관련 증상/ 약 복용 여부/ endpoint occurrence/ 약 부작용/ LDL cholesterol 수치 추적함.
+  
+- <img src="RACING_Table1.png" class="slide-img" alt="Table 1">
 
-## Regimen
+## 실험군
 :::: {.columns}
 
 ::: {.column width="50%"}
-**단독요법군**: 
+**단독요법군**: <br>
 - Rosuvastatin 20mg 1일 1회
 
 :::
 
 ::: {.column width="50%"}
-**병합요법군**: 
+**병합요법군**: <br>
 - Rosuvastatin 10mg + Ezetimibe 10mg 1일 1회
 :::
 
 ::::
 
-# Outcomes
+# Outcomes {.scrollable}
 
 ::: {.panel-tabset}
 ### Primary Composite Endpoint
 - 이 연구의 핵심 outcome.
-- 3년 동안 **심혈관 사망, 주요 심혈관 사건, 비치명적 뇌졸증** 하나라도 발생하면, primary endpoint가 발생한 것으로 판단.
+- 3년 동안 **심혈관 사망, 주요 심혈관 사건, 비치명적 뇌졸증** 하나라도 발생하면,<br>primary endpoint가 발생한 것으로 판단함.
 
-### Secondary Endpoint
-- **Secondary Efficacy Endpoints**:
-- 치료 효과를 추가로 확인하기 위한 outcome. 
-- 1년, 2년, 3년에 LDL cholesterol <7 mg/dL 달성 여부
-- primary endpoint의 개별 구성요소의 발생률
-- LDL cholesterol <55 mg/dL 달성률은 post-hoc analysis로 평가함.<br><br>
+### Secondary Endpoint 
+- **Secondary Efficacy Endpoint**:
+  - 치료 효과를 추가로 확인하기 위한 outcome. 
+  - primary endpoint의 개별 구성요소의 발생률.
+  - 1년, 2년, 3년에 LDL<70mg/dL 달성률.
+  - LDL cholesterol <55 mg/dL 달성률은 post-hoc analysis로 평가함.<br><br>
 
-- **Safety Endpoints**:
-- 치료가 얼마나 안전하고 지속 가능한지를 본 outcome.
-  - 약제 불내성으로 인한 약물 중단 또는 감량을 확인. 
-  - 새로 발생한 당뇨/근육 관련 이상반응/ 간 관련 이상반응을 관찰
+- **Safety Endpoint**:
+  - 치료가 얼마나 안전하고 지속 가능한지를 본 outcome.
+  - 약제 불내성으로 인한 약물 중단 또는 감량을 확인함. 
+  - 새로 발생한 당뇨/근육 관련 이상반응/ 간 관련 이상반응을 관찰함.
 :::
 
 # Statistical Analysis and Results
@@ -136,120 +149,121 @@ execute:
 -   Primary analysis는 intention-to-treat population에서 시행함.
 -   Per-protocol population으로 sensitivity analysis를 시행함.
 -   Safety outcomes는 safety population에서 분석함.
--   Missing outcome data는 imputation 없이 censoring 또는 available data 기준으로 처리함.
 -   Prespecified subgroup analysis로 결과의 일관성을 확인함.
 :::
 
 
-## Primary Objective and Results {#primary-objective-main}
+## Primary Objective and Results {#primary-objective-main .scrollable}
 
 -   Primary endpoint에 대해 **non-inferiority**를 검정함.
 -   병합요법이 고강도 statin 단독요법보다 3년 primary endpoint에서 임상적으로 뒤떨어지지 않는지 평가함.
--   Noninferiority는 두 군 primary endpoint 누적발생률 차이의 confidence interval 상한이 **2.0%p 미만**일 때 충족됨.
--   이 분석은 각 환자에서 사건이 언제 발생했는지까지 반영한 [**Time-to event outcome analysis**](#time-to-event-outcome-analysis)로 분석함.
-- Results: 
+-  CI의 upper bound가 비열등성 margin보다 작으면 비열등성 입증.
+-   이 분석은 사건이 언제 발생했는지까지 반영한 [**Time-to event outcome analysis**](#time-to-event-outcome-analysis)로 분석함.
+- Results: <br>
   -병합요법: 172/1894명, 9.1%
   - 고강도 스타틴 단독: 186/1886명, 9.9%
   - 절대위험차: -0.78%
   - 90% CI: -2.39% to 0.83%
-- 결과 해석: 90% CI upper bound(0.83%)가 non-inferiority margin (2.0%)보다 작기 때문에, 병행요법이 단독요법에 비열등하다고 결론을 낼 수 있다. 
+- 결과 해석: 90% CI upper bound(0.83%)가 non-inferiority margin (2.0%)보다 작기 때문에,<br> 병행요법이 단독요법에 비열등하다고 결론을 낼 수 있다. <br><br>
+- <img src="RACING_Table2.png" class="slide-img" alt="Table 2">
 
-## Table 2
-
-
-## Time-to event outcome analysis {#time-to-event-outcome-analysis}
+## Time-to event outcome analysis {#time-to-event-outcome-analysis .scrollable}
 - 단순히 event 발생 여부만 보는 것이 아니라, **언제 event가 발생했는지**까지 고려함.<br><br>
--K-M curve: 시간에 따라 사건이 얼마나 누적되는지 보여주는 그림.<br><br>
-- Log-rank test: 두 K-M curve가 전체 추적기간 동안 통계적으로 다른지 검정.<br><br>
-- Cox Regresssion: 두 군의 event 발생 속도를 hazard ratio, HR로 비교. HR이 1이면 비슷하고, 1보다 작으면 치료군의 event 위험이 낮은 방향.<br><br>
-- Results:  RACING에서는 병합요법과 고강도 스타틴 단독요법의 K-M curve가 비슷했고, Cox HR은 0.92로 1에 가까웠음. <br>
-그래서 두 군의 3년 심혈관 사건 발생 양상은 전반적으로 비슷하다고 해석함.
 
-## Figure 2
+- K-M curve: 시간에 따라 사건이 얼마나 누적되는지 보여주는 그림.<br><br>
+- Log-rank test: 두 K-M curve가 전체 추적기간 동안 통계적으로 다른지 검정.<br><br>
+- Cox Regresssion: 두 군의 event 발생 속도를 hazard ratio, HR로 비교.<br> HR이 1이면 비슷하고, 1보다 작으면 치료군의 event 위험이 낮은 방향.<br><br>
+- Results:  RACING에서는 병합요법과 고강도 스타틴 단독요법의 K-M curve가 비슷했고, <br> Cox HR은 0.92로 1에 가까웠음. <br>
+그래서 두 군의 3년 심혈관 사건 발생 양상은 전반적으로 비슷하다고 해석함.<br><br>
+- K-M Curve <br>
+<img src="RACING_Figure2.png" class="slide-img" alt="Figure 2">
 
 [Primary Objective로 돌아가기](#primary-objective-main)
 
-## Secondary Objective and Results
+## Secondary Objective and Results {.scrollable}
 - Primary objective가 유의하게 충족되면 secondary objective으로 넘어감.
 - LDL cholesterol을 70 mg/dL 미만으로 낮추는 목표 달성률을 비교하는 **우월성**을 검정함.
-- 연구 질문: 병합요법이 임상적으로 고강도 statin 단독요법보다 나쁘지 않다면, LDL 조절 목표 달성 면에서는 오히려 더 우수한가? 
 - LDL 수치<70 mg/dL 달성률을 1년, 2년, 3년에 평가함.
 - Results: 병합요법군이 고강도 statin 단독 요법군보다 모든 시점에서 LDL 목표 달성률이 유의하게 높았음.
-- 결과 해석:  병합 요법이 LDL 목표 달성률에서 단독요법보다 우월했다는 결론을 낼 수 있다.
-
-## Table 3
-
+- 결과 해석:  병합 요법이 LDL 목표 달성률에서 단독요법보다 우월했다는 결론을 낼 수 있다.<br><br>
+- <img src="RACING_Table3.png" class="slide-img" alt="Table 3">
 
 ## Post-hoc analysis
 -   Post-hoc analysis는 연구 시작 전에 미리 정한 주 분석이 아니라, 연구 도중 또는 결과 확인 후 추가로 시행한 분석임.
--   추가로 post-hoc 분석에서 더 엄격한 목표인 LDL-C <55 mg/dL도 병합요법군에서 더 많이 달성했습니다: 1년 42% vs 25%, 2년 45% vs 29%, 3년 42% vs 25%.
+-   추가로 post-hoc 분석에서 더 엄격한 목표인 LDL-C <55 mg/dL도 병합요법군에서 더 많이 달성함.
+- 1년 42% vs 25%, 2년 45% vs 29%, 3년 42% vs 25%.
 
-## Additional Results
+## Additional Results {.scrollable}
 :::  {.panel-tabset}
 ### primary endpoint 개별 구성요소
-    - Cardiovascular death: 0.4% vs 0.3%
-    - Major cardiovascular events: 8.1% vs 8.9%
-    - Non-fatal stroke: 0.8% vs 0.7%
-    - All-cause death: 1.4% vs 1.2%
-    -개별 구성요소는 두 군 간 유의한 차이가 없었음. 
+- <img src="RACING_Table2.png" class="slide-img" alt="Table 2">
+- 개별 구성요소는 두 군 간 유의한 차이가 없었음. 
 
 ### Safety Outcomes
--약제 불내성으로 인한 중단 또는 감량: 4.8% vs 8.2%
+- <img src="RACING_Table4.png" class="slide-img" alt="Table 4">
 - 고강도 statin 단독요법군에서 myalgia, liver enzyme elevation, creatine kinase elevation으로 인한 중단/감량이 더 많았음.
 - New-onset diabetes, muscle-related adverse events, cancer diagnosis 등 주요 safety events는 두 군 간 큰 차이가 없었음.
 
 
-### Subgroup analysis
-- Age, sex, BMI, diabetes, hypertension, CKD, previous MI/stroke/PAD, baseline LDL-C에 따른 subgroup에서 병합요법이 명확하게 불리한 결과는 관찰되지 않았음.
-
+### Subgroup analysis 
+- <img src="RACING_Figure3.png" class="slide-img" alt="Figure 3">
+- Age, sex, BMI, diabetes, hypertension, CKD, previous MI/stroke/PAD, baseline LDL-C에 따른 subgroup에서 병합요법과 단독요법 간에 유의한 차이가 관찰되지 않았음.
 :::
 
-### Table 4
-### Table 5
 
-## Sample Size
+## Sample Size {.scrollable}
 - IMPROVE-IT Trial은 RACING보다 더 강한 statin 사용 + 6년 follow-up
 - IMPROVE-IT의 내용을 바탕으로 RACING에서 예상치를 잡되, 아예 동일하지 않음
+- dropout: 15% <br><br>
 
 :::: {.columns}
 
 ::: {.column width="50%"}
-**Primary objective**: 
-- 예상 event rate: 13% vs 14%
-  - non-inferiority margin: 2.0%p
-  - one-sided alpha: 0.05
-  - power: 80%
+**Primary objective**: <br><br>
+- 예상 event rate: 13% vs 14% <br>
+  - non-inferiority margin: 2.0%p <br>
+  - one-sided alpha: 0.05 <br>
+  - power: 80% <br>
   - dropout: 15% <br><br>
-  - 계산: 1605 / (1 - 0.15)
-  # 1888.2
-  - 따라서 1605명/군 → 탈락률 반영 후 약 1890명/군, 최종 총 3780명
+  - **계산**:<br> 
+p1 <- 0.13 <br> 
+p2 <- 0.14 <br>  
+margin <- 0.02, alpha <- 0.05, power <- 0.80 <br><br> 
+  z_alpha <- qnorm(1 - alpha)<br> 
+  z_beta <- qnorm(power)<br> <br> 
+  n_per_group <- ((z_alpha + z_beta)^2 * (p1 * (1 - p1) + p2 * (1 - p2))) /
+    (margin - (p1 - p2))^2 <br> 
+  ceiling(n_per_group)
+
+<br>
+  - Primary endpoint 비열등성 검정에 필요한 수: 1605명/군<br>
+  - 15% loss to follow-up 보정:1605 / (1 - 0.15)= 1888.2명/군<br>
+  - 양군 합계: 1889 * 2 = 3778명. (총 3780명)
 
 :::
 
 ::: {.column width="50%"}
-**Secondary objective**: 
-- 예상 가정: 
-  - 병합요법군: 70%
-  - 고강도 statin 단독요법군: 50%
+**Secondary objective**: <br><br>
+- 예상 가정: <br>
+  - 병합요법군: 70% vs 고강도 statin 단독요법군: 50% <br>
   - 차이: 20%p <br><br>
-  - 계산: power.prop.test(
+  - **계산**: power.prop.test(
     p1 = 0.70,
     p2 = 0.50,
     sig.level = 0.05,
     power = 0.80,
-    alternative = "two.sided")
-- 대략 93명/군이 필요하고, 15% 탈락률을 반영하면:
-  93 / 0.85
-  # 109.41
-- 따라서 110명/군, 총 220명이면 secondary objective 검정은 충분.
+    alternative = "two.sided") <br>
+  - LDL 조절 효과 우월성 검정에 필요한 수: 93명/군 <br>
+  - 15% loss to follow-up 보정:93 / 0.8 = 109.41명/군 <br>
+  - 양군 합계: 110 * 2= 220명. <br>
+  - 최종 표본수 3780명은 secondary objective 검정에 충분했음.
 
 :::
 
 ::::
 
-## Analysis Population
+## Analysis Population {.scrollable}
 - **ITT Population**: 배정된 사람 전부. Primary endpoint의 주분석.
 - **PP Population**: 약을 프로토콜대로 잘 받은 사람. ITT 결과가 믿을만한지 확인하는 보조 분석.
-- **Safety Population**: 실제로 약을 받은 사람. 부작용 분석.
-
-## figure 1
+- **Safety Population**: 실제로 약을 받은 사람. 부작용 분석.<br><br>
+- <img src="RACING_Figure1.png" class="slide-img" alt="Figure 1">
