@@ -1,5 +1,7 @@
 # Journal Review
 
+## 발표자료 바로보기
+[Racing Trial Presentation 열기](https://chaeeon0130.github.io/Journal-Review/RACING/)
 Journal review presentation materials.
 
 ## RACING Trial Presentation
